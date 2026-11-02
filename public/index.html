@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Flowboard</title><link rel="stylesheet" href="/styles.css"></head>
+<body>
+  <header class="topbar"><div class="brand"><span class="logo">F</span><strong>Flowboard</strong></div><div class="top-actions"><span id="connection"><i></i> Connecting</span><span id="user-name"></span><button id="activity-button">Activity</button></div></header>
+  <main>
+    <aside class="sidebar"><div class="section-label">ORGANIZATION</div><div id="org-name" class="org-name"></div><div class="section-label tenant-label">BRANCHES</div><div id="tenants"></div><div class="sidebar-footer">Multi-tenant workspace<br><span>Changes are synced live</span></div></aside>
+    <section class="workspace"><div class="workspace-head"><div><div class="eyebrow" id="tenant-name"></div><h1 id="board-name">Loading board...</h1><p>Plan, prioritize, and ship together.</p></div><div class="presence" id="presence"></div></div><div id="board" class="board"></div></section>
+  </main>
+  <aside id="activity-panel" class="activity-panel hidden"><div class="panel-head"><h2>Activity</h2><button id="close-activity">×</button></div><div id="activity-list"></div></aside>
+  <dialog id="task-dialog"><form method="dialog" id="task-form"><button class="close" value="cancel">×</button><div class="eyebrow">TASK DETAILS</div><input type="hidden" id="task-id"><label>Title<input id="task-title" required></label><label>Description<textarea id="task-description" rows="5"></textarea></label><div class="dialog-actions"><button value="cancel" class="secondary">Cancel</button><button id="save-task" value="default">Save changes</button></div></form></dialog>
+  <script src="/app.js"></script>
+</body>
+</html>
